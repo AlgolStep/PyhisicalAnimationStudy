@@ -21,5 +21,12 @@
 //运动管理器
 @property (strong, nonatomic) CMMotionManager *cmMotionManager;
 
-
+/**
+ *  开始移动
+ */
+- (void)startUpdateMotion;
+/**
+ *  停止移动
+ */
+- (void)stopMotion;
 @end
