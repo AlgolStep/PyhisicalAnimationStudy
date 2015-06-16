@@ -14,6 +14,7 @@
 		309BF6F01B30275700C550FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309BF6EF1B30275700C550FB /* Images.xcassets */; };
 		309BF6F31B30275700C550FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309BF6F11B30275700C550FB /* LaunchScreen.xib */; };
 		309BF6FF1B30275800C550FB /* PyhisicalAnimationStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 309BF6FE1B30275800C550FB /* PyhisicalAnimationStudyTests.m */; };
+		309BF70A1B302DBF00C550FB /* MotionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 309BF7091B302DBF00C550FB /* MotionBall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		309BF6F81B30275800C550FB /* PyhisicalAnimationStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyhisicalAnimationStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		309BF6FD1B30275800C550FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		309BF6FE1B30275800C550FB /* PyhisicalAnimationStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PyhisicalAnimationStudyTests.m; sourceTree = "<group>"; };
+		309BF7081B302DBF00C550FB /* MotionBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionBall.h; sourceTree = "<group>"; };
+		309BF7091B302DBF00C550FB /* MotionBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionBall.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,9 @@
 				309BF6E71B30275700C550FB /* AppDelegate.m */,
 				309BF6E91B30275700C550FB /* ViewController.h */,
 				309BF6EA1B30275700C550FB /* ViewController.m */,
+				309BF70D1B302F5C00C550FB /* Views */,
+				309BF70C1B302F5500C550FB /* Models */,
+				309BF70B1B302F4800C550FB /* Controllers */,
 				309BF6EC1B30275700C550FB /* Main.storyboard */,
 				309BF6EF1B30275700C550FB /* Images.xcassets */,
 				309BF6F11B30275700C550FB /* LaunchScreen.xib */,
@@ -117,6 +123,29 @@
 				309BF6FD1B30275800C550FB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		309BF70B1B302F4800C550FB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		309BF70C1B302F5500C550FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		309BF70D1B302F5C00C550FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				309BF7081B302DBF00C550FB /* MotionBall.h */,
+				309BF7091B302DBF00C550FB /* MotionBall.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309BF70A1B302DBF00C550FB /* MotionBall.m in Sources */,
 				309BF6EB1B30275700C550FB /* ViewController.m in Sources */,
 				309BF6E81B30275700C550FB /* AppDelegate.m in Sources */,
 				309BF6E51B30275700C550FB /* main.m in Sources */,
@@ -297,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -344,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PyhisicalAnimationStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PyhisicalAnimationStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
