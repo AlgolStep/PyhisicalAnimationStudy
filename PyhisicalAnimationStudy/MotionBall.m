@@ -48,6 +48,10 @@
 - (void)startUpdateMotion{
 //    设置采集更新的频率 单位是秒 s
     NSTimeInterval updateInterval = 0.07;
+    CGSize size = [self superview].frame.size;
+    __block CGRect fframe = [self frame];
+//    在block中 只能使用weakSelf
+    MotionBall * __weak weakSelf = self;
     
 }
 
