@@ -14,6 +14,7 @@
 - (void)updateMoveDataWithMoveX:(double)accelerometerX
                        andMoveY:(double)accelerometerY;
 
+- (void)ballMoveToPointX:(float)pointX andPointY:(float)pointY;
 @end
 @interface MotionBall : UIView
 @property (weak, nonatomic) id<MotionBallDelegate> delegate;

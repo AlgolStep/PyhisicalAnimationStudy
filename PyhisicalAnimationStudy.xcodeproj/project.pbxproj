@@ -15,6 +15,8 @@
 		309BF6F31B30275700C550FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309BF6F11B30275700C550FB /* LaunchScreen.xib */; };
 		309BF6FF1B30275800C550FB /* PyhisicalAnimationStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 309BF6FE1B30275800C550FB /* PyhisicalAnimationStudyTests.m */; };
 		309BF70A1B302DBF00C550FB /* MotionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 309BF7091B302DBF00C550FB /* MotionBall.m */; };
+		30E0FCB01B313D4400CE3876 /* DrawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0FCAF1B313D4400CE3876 /* DrawGraphics.m */; };
+		30E0FCE81B318A8200CE3876 /* CustomDynamicBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0FCE71B318A8200CE3876 /* CustomDynamicBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		309BF6FE1B30275800C550FB /* PyhisicalAnimationStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PyhisicalAnimationStudyTests.m; sourceTree = "<group>"; };
 		309BF7081B302DBF00C550FB /* MotionBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionBall.h; sourceTree = "<group>"; };
 		309BF7091B302DBF00C550FB /* MotionBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionBall.m; sourceTree = "<group>"; };
+		30E0FCAE1B313D4400CE3876 /* DrawGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawGraphics.h; sourceTree = "<group>"; };
+		30E0FCAF1B313D4400CE3876 /* DrawGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawGraphics.m; sourceTree = "<group>"; };
+		30E0FCE61B318A8200CE3876 /* CustomDynamicBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDynamicBehavior.h; sourceTree = "<group>"; };
+		30E0FCE71B318A8200CE3876 /* CustomDynamicBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDynamicBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,8 @@
 		309BF70C1B302F5500C550FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30E0FCE61B318A8200CE3876 /* CustomDynamicBehavior.h */,
+				30E0FCE71B318A8200CE3876 /* CustomDynamicBehavior.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -144,6 +152,8 @@
 			children = (
 				309BF7081B302DBF00C550FB /* MotionBall.h */,
 				309BF7091B302DBF00C550FB /* MotionBall.m */,
+				30E0FCAE1B313D4400CE3876 /* DrawGraphics.h */,
+				30E0FCAF1B313D4400CE3876 /* DrawGraphics.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -248,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E0FCE81B318A8200CE3876 /* CustomDynamicBehavior.m in Sources */,
 				309BF70A1B302DBF00C550FB /* MotionBall.m in Sources */,
+				30E0FCB01B313D4400CE3876 /* DrawGraphics.m in Sources */,
 				309BF6EB1B30275700C550FB /* ViewController.m in Sources */,
 				309BF6E81B30275700C550FB /* AppDelegate.m in Sources */,
 				309BF6E51B30275700C550FB /* main.m in Sources */,
@@ -444,6 +456,7 @@
 				309BF7041B30275800C550FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		309BF7051B30275800C550FB /* Build configuration list for PBXNativeTarget "PyhisicalAnimationStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +465,7 @@
 				309BF7071B30275800C550FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

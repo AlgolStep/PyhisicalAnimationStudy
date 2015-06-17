@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _cmMotionManager = [[CMMotionManager alloc] init];
-        self.velocity = 50.0;
+        self.velocity = 150.0;
     }
     return self;
 }
@@ -78,7 +78,10 @@
             [UIView setAnimationDuration:0.1];
             [weakSelf setFrame:fframe];
             [UIView commitAnimations];
-            [weakSelf.delegate updateMoveDataWithMoveX:accelerometerData.acceleration.x andMoveY:accelerometerData.acceleration.y];
+            [weakSelf.delegate updateMoveDataWithMoveX:accelerometerData.acceleration.x
+                                              andMoveY:accelerometerData.acceleration.y];
+            [weakSelf.delegate ballMoveToPointX:fframe.origin.x
+                                      andPointY:fframe.origin.y];
         }];
     }
 }
