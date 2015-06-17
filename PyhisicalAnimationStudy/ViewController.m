@@ -13,6 +13,7 @@
 @interface ViewController ()
 {
     UICollisionBehavior *collisionBehivior;
+    DrawGraphics *drawGraphics;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIDynamicAnimator *dynamicAnimator;
@@ -43,7 +44,7 @@
     _contentLabel.backgroundColor = [UIColor orangeColor];
     [_motionBallView addSubview:_contentLabel];
     
-    DrawGraphics *drawGraphics = [[DrawGraphics alloc] initWithFrame:self.view.frame];
+    drawGraphics = [[DrawGraphics alloc] initWithFrame:self.view.frame];
     [drawGraphics addSubview:_motionBallView];
     [self.view addSubview:drawGraphics];
     
@@ -85,7 +86,18 @@
 }
 
 - (void)ballMoveToPointX:(float)pointX andPointY:(float)pointY{
-    NSLog(@"the point X is %.2f and Y is %.2f",pointX,pointY);
+//    NSLog(@"the point X is %.2f and Y is %.2f",pointX,pointY);
+    NSInteger X = pointX;
+    NSInteger Y = pointY;
+//    NSLog(@"&&&&&&&&&&&&&&&& X is %d and Y is %d",X,Y);
+    if ([drawGraphics.path containsPoint:CGPointMake(pointX , pointY)]) {
+//        [[[UIAlertView alloc] initWithTitle:@"提示"
+//                                    message:@"YES"
+//                                   delegate:nil
+//                          cancelButtonTitle:nil
+//                          otherButtonTitles:@"OK", nil] show];
+        NSLog(@"&&&&&&&&&&&&&&&& X is %d and Y is %d",X,Y);
+    }
     
 }
 @end

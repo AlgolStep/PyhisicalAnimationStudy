@@ -20,9 +20,9 @@
  */
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [self drawLeftLineWithStartPoint:CGPointMake(80, self.frame.size.height-50)
-                         andEndPoint:CGPointMake(80, 80)
-                        useQuadPoint:CGPointMake(80, 80)];
+    [self drawLeftLineWithStartPoint:CGPointMake(80.0, self.frame.size.height-50.0)
+                         andEndPoint:CGPointMake(80.0, 80.0)
+                        useQuadPoint:CGPointMake(80.0, 80.0)];
     
     [self drawRightLineWithStartPoint:CGPointMake(100, self.frame.size.height-50)
                           andEndPoint:CGPointMake(100, 80)
