@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "MotionBall.h"
+@interface ViewController : UIViewController<MotionBallDelegate>
 
-
+@property (strong, nonatomic) MotionBall *motionBallView;
+@property (strong, nonatomic) UILabel *contentLabel;
 @end
 

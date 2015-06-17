@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _cmMotionManager = [[CMMotionManager alloc] init];
-        self.velocity = 100.0;
+        self.velocity = 50.0;
     }
     return self;
 }
