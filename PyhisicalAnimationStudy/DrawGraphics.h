@@ -10,4 +10,5 @@
 #import <QuartzCore/QuartzCore.h>
 @interface DrawGraphics : UIView
 @property (strong, nonatomic)UIBezierPath *path;
+@property (strong, nonatomic)UIBezierPath *rightPath;
 @end

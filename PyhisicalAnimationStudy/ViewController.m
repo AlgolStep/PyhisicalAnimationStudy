@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 #import "DrawGraphics.h"
 
@@ -14,6 +15,7 @@
 {
     UICollisionBehavior *collisionBehivior;
     DrawGraphics *drawGraphics;
+    AVAudioPlayer *player;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIDynamicAnimator *dynamicAnimator;
@@ -28,10 +30,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    
 //    UIGravityBehavior *gravityBehivior = [[UIGravityBehavior alloc] initWithItems:@[self.imageView]];
 //    [animator addBehavior:gravityBehivior];
-    
+#pragma mark -初始化音乐
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"答错" withExtension:@"mp3"];
+    NSError* error = nil;
+    if(nil!=error)
+    {
+        
+    }
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+
     
     
     CGRect ballViewFrame = CGRectMake(0,0, 10, 10);
@@ -48,23 +58,27 @@
     [drawGraphics addSubview:_motionBallView];
     [self.view addSubview:drawGraphics];
     
-    
+    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:drawGraphics];
     collisionBehivior = [[UICollisionBehavior alloc] initWithItems:@[self.contentLabel]];
     collisionBehivior.translatesReferenceBoundsIntoBoundary = YES;
-//    [collisionBehivior setTranslatesReferenceBoundsIntoBoundaryWithInsets:UIEdgeInsetsMake(180, 0, 200, 0)];
-    [collisionBehivior addBoundaryWithIdentifier:@"idne" fromPoint:CGPointMake(80, 80) toPoint:CGPointMake(100, 80)];
+    [collisionBehivior setTranslatesReferenceBoundsIntoBoundaryWithInsets:UIEdgeInsetsMake(10, 10, 200, 200)];
+//    [collisionBehivior addBoundaryWithIdentifier:@"idne" fromPoint:CGPointMake(80, 80) toPoint:CGPointMake(100, 80)];
 //    [collisionBehivior addBoundaryWithIdentifier:nil forPath:drawGraphics.path];
 //    self.square1PropertiesBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[self.contentLabel]];
 //    self.square1PropertiesBehavior.elasticity = 0.5;
 //    [animator addBehavior:self.square1PropertiesBehavior];
     
-    [animator addBehavior:collisionBehivior];
+//    [animator addBehavior:collisionBehivior];
     self.dynamicAnimator = animator;
     [_motionBallView startUpdateMotion];
     
     
-    
-    
+    UIButton *startButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 30)];
+    [startButton setTitle:@"start" forState:UIControlStateNormal];
+    [startButton addTarget:self
+                    action:@selector(startMove)
+          forControlEvents:UIControlEventTouchUpInside];
+    [drawGraphics addSubview:startButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -89,15 +103,19 @@
 //    NSLog(@"the point X is %.2f and Y is %.2f",pointX,pointY);
     NSInteger X = pointX;
     NSInteger Y = pointY;
-//    NSLog(@"&&&&&&&&&&&&&&&& X is %d and Y is %d",X,Y);
-    if ([drawGraphics.path containsPoint:CGPointMake(pointX , pointY)]) {
-//        [[[UIAlertView alloc] initWithTitle:@"提示"
-//                                    message:@"YES"
-//                                   delegate:nil
-//                          cancelButtonTitle:nil
-//                          otherButtonTitles:@"OK", nil] show];
-        NSLog(@"&&&&&&&&&&&&&&&& X is %d and Y is %d",X,Y);
+    CGRect ballRect = CGRectMake(X, Y, 12, 12);
+    CGRect pathRect = CGRectMake(drawGraphics.path.bounds.origin.x, drawGraphics.path.bounds.origin.y, 2, drawGraphics.path.bounds.size.height);
+    if (CGRectIntersectsRect(ballRect,pathRect)) {
+        NSLog(@"********** X is %d and Y is %d",X,Y);
+        [_motionBallView stopMotion];
+        [player play];
+        
     }
     
+}
+
+- (void)startMove
+{
+    [_motionBallView startUpdateMotion];
 }
 @end

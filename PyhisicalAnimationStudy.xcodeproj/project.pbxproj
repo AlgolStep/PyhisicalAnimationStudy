@@ -17,6 +17,8 @@
 		309BF70A1B302DBF00C550FB /* MotionBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 309BF7091B302DBF00C550FB /* MotionBall.m */; };
 		30E0FCB01B313D4400CE3876 /* DrawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0FCAF1B313D4400CE3876 /* DrawGraphics.m */; };
 		30E0FCE81B318A8200CE3876 /* CustomDynamicBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0FCE71B318A8200CE3876 /* CustomDynamicBehavior.m */; };
+		30FA79421B32AE47001AA726 /* 答对.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA79401B32AE47001AA726 /* 答对.mp3 */; };
+		30FA79431B32AE47001AA726 /* 答错.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA79411B32AE47001AA726 /* 答错.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		30E0FCAF1B313D4400CE3876 /* DrawGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawGraphics.m; sourceTree = "<group>"; };
 		30E0FCE61B318A8200CE3876 /* CustomDynamicBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDynamicBehavior.h; sourceTree = "<group>"; };
 		30E0FCE71B318A8200CE3876 /* CustomDynamicBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDynamicBehavior.m; sourceTree = "<group>"; };
+		30FA79401B32AE47001AA726 /* 答对.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "答对.mp3"; sourceTree = "<group>"; };
+		30FA79411B32AE47001AA726 /* 答错.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "答错.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		309BF6E21B30275700C550FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30FA793F1B32AE38001AA726 /* Sounds */,
 				309BF6E31B30275700C550FB /* Info.plist */,
 				309BF6E41B30275700C550FB /* main.m */,
 			);
@@ -156,6 +161,15 @@
 				30E0FCAF1B313D4400CE3876 /* DrawGraphics.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		30FA793F1B32AE38001AA726 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				30FA79401B32AE47001AA726 /* 答对.mp3 */,
+				30FA79411B32AE47001AA726 /* 答错.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FA79431B32AE47001AA726 /* 答错.mp3 in Resources */,
 				309BF6EE1B30275700C550FB /* Main.storyboard in Resources */,
+				30FA79421B32AE47001AA726 /* 答对.mp3 in Resources */,
 				309BF6F31B30275700C550FB /* LaunchScreen.xib in Resources */,
 				309BF6F01B30275700C550FB /* Images.xcassets in Resources */,
 			);

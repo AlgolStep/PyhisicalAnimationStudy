@@ -42,8 +42,9 @@
     [self.path moveToPoint:startPoint];
     [self.path addLineToPoint:endPoint];
     [[UIColor orangeColor] setStroke];
-    [self.path setLineWidth:2.0f];
+    [self.path setLineWidth:3.0f];
     [self.path stroke];
+    NSLog(@"the bezierpath bounds is %@",NSStringFromCGRect(self.path.bounds));
     //   获取当前绘图环境
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     //    设置画笔的宽度
